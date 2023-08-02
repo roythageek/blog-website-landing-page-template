@@ -1,0 +1,258 @@
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  height:100vh;
+  background-color:black;
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 4fr 2fr 1fr;
+  grid-area:
+  "header header header"
+  "main main main"
+  "section1 section1 section2"
+  "footer foooter footer";
+  grid-gap:0px;
+  font-family: 'Raleway', sans-serif;
+}
+header{
+  background-color:black;
+  grid-column:1/4;
+  color:white;
+  display:grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-gap:10px;
+}
+.logo-container{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  grid-column:1/2;
+  font-family: 'Dancing Script', cursive;
+}
+ul{
+  display:flex;
+  justify-content: space-between;
+  gap:50px;
+  align-items:center;
+  grid-column:3/4;
+  list-style-type: none;
+}
+ul li a{
+  text-decoration:underline;
+  color:white;
+}
+.header-btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+  grid-column:5/6;
+}
+.first-btn{
+  padding:10px;
+  border-radius:10px;
+  background-color:red;
+  border:1px solid red;
+  color:white;
+
+}
+main{
+  background-color: transparent;
+  margin:20px;
+  grid-column:1/3;
+  grid-row:2/3;
+}
+.main-container{
+  display:grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 4fr 4fr 4fr fr ;
+  grid-gap:20px;
+
+}
+.main-box1{
+  background-image:url(images/programmer.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+  grid-column:1/4;
+  grid-row:1/4;
+  border-radius:10px;
+  height:300px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  margin:20px;
+  gap:20px;
+}
+.main-text{
+  margin-left:50px;
+}
+input{
+  background: transparent;
+  width:400px;
+  border:2px solid white;
+  padding: 5px;
+  color:white;
+  border-radius:5px;
+  margin:10px;
+}
+.main-btn{
+  background-color: black;
+  color:white;
+  border:2px solid black;
+  width:400px;
+  padding:5px;
+  margin:10px;
+  text-decoration:underline;
+}
+.main-btn:hover{
+  background-color: white;
+  color:black;
+  border: 2px solid white;
+}
+.main-box2{
+  background-image: url(images/fitness.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover ;
+  grid-column:4/6;
+  grid-row:1/3;
+  border-radius:10px;
+  height:300px;
+}
+.sect1{
+  background-image:url(images/pexels-tima-miroshnichenko-4988133.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  grid-column:1/2;
+  grid-row:3/5;
+  border-radius:10px;
+  margin-top:-20px;
+  margin-left:20px;
+  margin-bottom:20px;
+}
+.section-box{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  color:white;
+  width:400px;
+  height:110px;
+  margin-left:500px;
+  margin-top:35px;
+  padding:10px;
+  text-decoration: underline;
+}
+
+
+.sect2{
+  background-image:url(images/pexels-cottonbro-studio-6686280.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  grid-column: 2/3;
+  grid-row:3/5;
+  border-radius:10px;
+  margin-top:-30px;
+  margin-right:20px;
+  margin-left:20px;
+  margin-bottom:20px;
+}
+
+.section-box2{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  color:white;
+  width:300px;
+  height:5px;
+  margin-left:5px;
+  margin-top:80px;
+  padding:10px;
+  text-decoration: underline;
+}
+footer{
+  background-color: black;
+  grid-column:1/3;
+  grid-row:5/6;
+}
+.socials{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  gap:50px;
+  font-size:20px;
+  margin-bottom:2px;
+  padding:5px;
+  text-decoration:underline;
+}
+
+
+
+
+
+@media screen and (max-width:425px){
+  body{
+    height:90vh;
+    background-color:black;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+  }
+  ul{
+    display:none;
+  }
+  .header-btn{
+    margin-right:800px;
+  }
+  .first-btn{
+    width:80px;
+  }
+  .logo-container{
+    margin-left:20px;
+    font-size:15px;
+  }
+  .main-container{
+    display:flex;
+    flex-direction: row;
+    width:50%;
+  }
+  .main-box1{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width:100%;
+    background-image:none;
+    margin-bottom:100px;
+    margin-left:50px;
+  }
+  .main-text{
+    margin-right:100px;
+  }
+  .main-input{
+    margin-right:60px;
+  }
+  input,.main-btn{
+    width:200px;
+  }
+  .sect1{
+    width:80%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:100px;
+  }
+  .section-box{
+    text-align:center;
+    height:10px;
+  }
+  }
+
